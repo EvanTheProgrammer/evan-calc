@@ -11,13 +11,14 @@ int main() {
 	parser_type parser;
 
 	// Vars
+	bool open = true;
 	std::string input;
 
 	// Inital Prompt
 	std::cout << "Evan Calculator 1.0" << std::endl;
 	std::cout << "Use exit() to close the program." << std::endl;
 
-	while (true) {
+	while (open) {
 		// Prompt User For Input
 		std::cout << "Calculator> ";
 
@@ -26,7 +27,7 @@ int main() {
 
 		// Exit Command
 		if (input == "exit()") {
-			return 0;
+			open = false;
 		}
 
 		// Prints Output
